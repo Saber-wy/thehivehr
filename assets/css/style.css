@@ -1,0 +1,1934 @@
+/* =========================================================
+   THE HIVE HR
+   GLOBAL USER INTERFACE STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   1. RESET AND GLOBAL SETTINGS
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f5f7;
+    color: #2c2c2c;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+}
+
+
+/* =========================================================
+   2. TOP NAVIGATION BAR
+   ========================================================= */
+
+.topbar {
+    min-height: 68px;
+    background: #1f2328;
+    color: #ffffff;
+
+    padding: 0 32px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 3px solid #d89b26;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+    position: relative;
+    z-index: 100;
+}
+
+.topbar h1 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+.topbar div {
+    font-size: 14px;
+}
+
+.topbar a {
+    color: #ffffff;
+    font-weight: 600;
+
+    transition:
+        color 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.topbar a:hover {
+    color: #f0b84d;
+}
+
+
+/* =========================================================
+   3. MAIN PAGE LAYOUT
+   ========================================================= */
+
+.layout {
+    display: flex;
+    min-height: calc(100vh - 68px);
+}
+
+
+/* =========================================================
+   4. SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    width: 235px;
+    flex-shrink: 0;
+
+    background: #ffffff;
+
+    border-right: 1px solid #e1e4e8;
+
+    padding: 24px 16px;
+
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar a {
+    display: block;
+
+    padding: 11px 14px;
+    margin-bottom: 6px;
+
+    border-radius: 7px;
+
+    color: #444444;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    border-left: 3px solid transparent;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sidebar a:hover {
+    background: #fff6e5;
+    color: #8b5d00;
+    border-left-color: #d89b26;
+
+    transform: translateX(2px);
+}
+
+
+/* =========================================================
+   5. MAIN CONTENT
+   ========================================================= */
+
+.content {
+    flex: 1;
+
+    padding: 32px;
+
+    min-width: 0;
+}
+
+
+/* =========================================================
+   6. PAGE HEADINGS
+   ========================================================= */
+
+.page-title {
+    margin-bottom: 26px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid #e0e3e7;
+}
+
+.page-title h2 {
+    font-size: 26px;
+    color: #20242a;
+
+    margin-bottom: 4px;
+}
+
+.page-title p {
+    color: #70757d;
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   7. DASHBOARD CARDS
+   ========================================================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(200px, 1fr));
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+.card {
+    background: #ffffff;
+
+    padding: 22px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e1e4e8;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.05);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+
+    color: #555b63;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+}
+
+.card p {
+    font-size: 25px;
+    font-weight: 700;
+
+    color: #20242a;
+}
+
+
+/* =========================================================
+   8. TABLE CONTAINER
+   ========================================================= */
+
+.table-container {
+    background: #ffffff;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e1e4e8;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.04);
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   9. TABLES
+   ========================================================= */
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 14px;
+}
+
+th,
+td {
+    padding: 13px 14px;
+
+    border-bottom: 1px solid #e7e9ec;
+
+    text-align: left;
+
+    vertical-align: middle;
+}
+
+th {
+    background: #f4f5f7;
+
+    color: #454a51;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.25px;
+
+    white-space: nowrap;
+}
+
+tbody tr {
+    transition: background 0.15s ease;
+}
+
+tbody tr:hover {
+    background: #faf7f1;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   10. BUTTONS
+   ========================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 9px 15px;
+
+    border: 1px solid transparent;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    background: #262b31;
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    line-height: 1.4;
+
+    text-align: center;
+
+    transition:
+        background 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
+}
+
+.btn:hover {
+    background: #101317;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.15);
+
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+
+/* Secondary Button */
+
+.btn-secondary {
+    background: #697078;
+}
+
+.btn-secondary:hover {
+    background: #545a61;
+}
+
+
+/* Danger Button */
+
+.btn-danger {
+    background: #a43c3c;
+}
+
+.btn-danger:hover {
+    background: #832d2d;
+}
+
+
+/* Optional Primary Accent Button */
+
+.btn-primary {
+    background: #c18418;
+}
+
+.btn-primary:hover {
+    background: #a76c0b;
+}
+
+
+/* =========================================================
+   11. FORMS
+   ========================================================= */
+
+.form-container {
+    width: 100%;
+    max-width: 680px;
+
+    background: #ffffff;
+
+    padding: 28px;
+
+    border-radius: 10px;
+
+    border: 1px solid #e1e4e8;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #3e4349;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #cfd3d7;
+
+    border-radius: 6px;
+
+    background: #ffffff;
+
+    color: #292d32;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.form-group textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #c18418;
+
+    box-shadow:
+        0 0 0 3px rgba(193, 132, 24, 0.14);
+}
+
+.form-group input:disabled,
+.form-group select:disabled,
+.form-group textarea:disabled {
+    background: #f0f1f2;
+    color: #777777;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   12. MESSAGES AND ALERTS
+   ========================================================= */
+
+.message {
+    margin-bottom: 20px;
+
+    padding: 13px 15px;
+
+    background: #fff8e8;
+
+    border: 1px solid #ead19d;
+
+    border-left: 4px solid #c18418;
+
+    border-radius: 6px;
+
+    color: #684a12;
+
+    font-size: 14px;
+}
+
+
+/* Optional Success Message */
+
+.message-success {
+    background: #edf8f0;
+
+    border: 1px solid #b7dbc0;
+    border-left: 4px solid #37834a;
+
+    color: #285f36;
+}
+
+
+/* Optional Error Message */
+
+.message-error {
+    background: #fbeeee;
+
+    border: 1px solid #e3b8b8;
+    border-left: 4px solid #a43c3c;
+
+    color: #7b2929;
+}
+
+
+/* =========================================================
+   13. STATUS BADGES
+   ========================================================= */
+
+.status {
+    display: inline-block;
+
+    padding: 4px 9px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* Active / Present */
+
+.status-active,
+.status-present {
+    background: #e6f4ea;
+    color: #246c36;
+}
+
+
+/* Inactive / Absent */
+
+.status-inactive,
+.status-absent {
+    background: #f8e8e8;
+    color: #8b3030;
+}
+
+
+/* Incomplete / Pending */
+
+.status-incomplete,
+.status-pending {
+    background: #fff3d8;
+    color: #85600d;
+}
+
+
+/* =========================================================
+   14. INFORMATION / DETAIL SECTIONS
+   ========================================================= */
+
+.info-box {
+    background: #ffffff;
+
+    border: 1px solid #e1e4e8;
+
+    border-radius: 10px;
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.info-row {
+    display: flex;
+
+    padding: 10px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.info-row:last-child {
+    border-bottom: none;
+}
+
+.info-label {
+    width: 180px;
+
+    font-weight: 600;
+
+    color: #555b63;
+}
+
+.info-value {
+    flex: 1;
+}
+
+
+/* =========================================================
+   15. EMPTY TABLE / EMPTY CONTENT
+   ========================================================= */
+
+.empty-state {
+    padding: 30px;
+
+    text-align: center;
+
+    color: #777d84;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   16. SMALL SCREEN / RESPONSIVE LAYOUT
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    .topbar {
+        padding: 15px 20px;
+    }
+
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+
+        display: flex;
+
+        gap: 6px;
+
+        overflow-x: auto;
+
+        padding: 12px 15px;
+
+        border-right: none;
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .sidebar a {
+        flex-shrink: 0;
+
+        margin-bottom: 0;
+
+        border-left: none;
+        border-bottom: 3px solid transparent;
+    }
+
+    .sidebar a:hover {
+        border-left: none;
+        border-bottom-color: #d89b26;
+
+        transform: none;
+    }
+
+    .content {
+        padding: 24px 18px;
+    }
+
+    .cards {
+        grid-template-columns:
+            repeat(auto-fit, minmax(160px, 1fr));
+    }
+}
+
+
+/* =========================================================
+   17. MOBILE LAYOUT
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .topbar {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 7px;
+
+        padding: 14px 16px;
+    }
+
+    .topbar h1 {
+        font-size: 20px;
+    }
+
+    .content {
+        padding: 20px 14px;
+    }
+
+    .page-title h2 {
+        font-size: 22px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .form-container {
+        padding: 20px;
+    }
+
+    .table-container {
+        padding: 12px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 8px 11px;
+
+        font-size: 12px;
+    }
+
+    .info-row {
+        flex-direction: column;
+
+        gap: 4px;
+    }
+
+    .info-label {
+        width: 100%;
+    }
+}
+
+/* =========================================================
+   ADMIN DASHBOARD
+   ========================================================= */
+
+.dashboard-stat {
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-stat::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background: #d89b26;
+}
+
+.stat-label {
+    color: #656b73;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.4px;
+
+    margin-bottom: 8px;
+}
+
+.stat-value {
+    color: #20242a;
+
+    font-size: 32px;
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    margin-bottom: 7px;
+}
+
+.stat-description {
+    color: #7b8087;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   DASHBOARD SECTIONS
+   ========================================================= */
+
+.dashboard-section {
+    background: #ffffff;
+
+    padding: 24px;
+
+    border: 1px solid #e1e4e8;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.04);
+
+    margin-bottom: 25px;
+}
+
+.section-heading {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.section-heading h3 {
+    color: #292d32;
+
+    font-size: 18px;
+
+    margin-bottom: 3px;
+}
+
+.section-heading p {
+    color: #777d84;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS
+   ========================================================= */
+
+.quick-actions {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(190px, 1fr));
+
+    gap: 14px;
+}
+
+.quick-action {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 105px;
+
+    padding: 17px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #e2e5e8;
+
+    border-radius: 8px;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.quick-action:hover {
+    background: #fff8eb;
+
+    border-color: #d9b66e;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.quick-action strong {
+    color: #30343a;
+
+    font-size: 14px;
+
+    margin-bottom: 7px;
+}
+
+.quick-action span {
+    color: #737980;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+/* =========================================================
+   EMPLOYEE MANAGEMENT
+   ========================================================= */
+
+.page-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.table-header h3 {
+    font-size: 17px;
+    color: #292d32;
+    margin-bottom: 3px;
+}
+
+.table-header p {
+    font-size: 13px;
+    color: #777d84;
+}
+
+.action-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.inline-form {
+    display: inline;
+    margin: 0;
+}
+
+.btn-small {
+    padding: 7px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   EMPLOYEE MANAGEMENT RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+    .page-title-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-title-row .btn {
+        align-self: flex-start;
+    }
+
+}
+
+/* =========================================================
+   FILTER PANELS
+   ========================================================= */
+
+.filter-panel {
+    background: #ffffff;
+
+    padding: 22px;
+
+    margin-bottom: 24px;
+
+    border: 1px solid #e1e4e8;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 10px rgba(0, 0, 0, 0.04);
+}
+
+.filter-heading {
+    margin-bottom: 18px;
+
+    padding-bottom: 13px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.filter-heading h3 {
+    color: #292d32;
+
+    font-size: 17px;
+
+    margin-bottom: 3px;
+}
+
+.filter-heading p {
+    color: #777d84;
+
+    font-size: 13px;
+}
+
+.filter-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(200px, 1fr));
+
+    gap: 18px;
+}
+
+.filter-grid .form-group {
+    margin-bottom: 0;
+}
+
+.filter-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   ATTENDANCE TABLE
+   ========================================================= */
+
+.employee-cell {
+    display: flex;
+
+    flex-direction: column;
+
+    min-width: 150px;
+}
+
+.employee-cell strong {
+    color: #30343a;
+
+    font-size: 14px;
+}
+
+.employee-cell span {
+    color: #858a90;
+
+    font-size: 12px;
+
+    margin-top: 1px;
+}
+
+.muted-text {
+    color: #8a8f95;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   FILTER RESPONSIVENESS
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-actions {
+        flex-wrap: wrap;
+    }
+
+}
+
+/* =========================================================
+   PAYROLL MANAGEMENT
+   ========================================================= */
+
+.payroll-table {
+    min-width: 1050px;
+}
+
+.payroll-month {
+    color: #3e4349;
+    white-space: nowrap;
+}
+
+.money-cell {
+    white-space: nowrap;
+}
+
+.deduction-value {
+    color: #9a3d3d;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.net-pay {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    background: #edf8f0;
+
+    color: #28623a;
+
+    border-radius: 5px;
+
+    white-space: nowrap;
+}
+
+/* =========================================================
+   PERFORMANCE MANAGEMENT
+   ========================================================= */
+
+.rating-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.rating-low {
+    background: #f8e8e8;
+    color: #8b3030;
+}
+
+.rating-average {
+    background: #fff3d8;
+    color: #85600d;
+}
+
+.rating-high {
+    background: #e6f4ea;
+    color: #246c36;
+}
+
+.remarks-cell {
+    min-width: 220px;
+    max-width: 420px;
+
+    line-height: 1.5;
+
+    color: #555b63;
+}
+
+/* =========================================================
+   REPORTS DASHBOARD
+   ========================================================= */
+
+.report-payroll-total {
+    font-size: 24px;
+}
+
+.report-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 16px;
+}
+
+.report-card {
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 150px;
+
+    padding: 20px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #e1e4e8;
+
+    border-radius: 9px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.report-card:hover {
+    transform: translateY(-2px);
+
+    background: #fff8eb;
+
+    border-color: #d9b66e;
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.report-card strong {
+    color: #30343a;
+
+    font-size: 15px;
+
+    margin-bottom: 8px;
+}
+
+.report-card span {
+    color: #737980;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.report-link {
+    margin-top: auto;
+
+    padding-top: 14px;
+
+    color: #9a680d;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+/* =========================================================
+   EMPLOYEE DASHBOARD
+   ========================================================= */
+
+.employee-stat-text {
+    font-size: 22px;
+
+    white-space: normal;
+
+    overflow-wrap: break-word;
+}
+
+
+/* Today's Attendance */
+
+.attendance-state {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 4px 0 20px;
+}
+
+.attendance-state h4 {
+    margin-top: 10px;
+    margin-bottom: 3px;
+
+    color: #30343a;
+
+    font-size: 17px;
+}
+
+.attendance-state p {
+    color: #737980;
+
+    font-size: 13px;
+}
+
+
+/* Attendance details */
+
+.attendance-details {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(140px, 1fr));
+
+    gap: 12px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+.attendance-detail {
+    padding: 14px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #e7e9ec;
+
+    border-radius: 7px;
+}
+
+.attendance-detail span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #777d84;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+}
+
+.attendance-detail strong {
+    color: #30343a;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   EMPLOYEE DASHBOARD RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .attendance-state {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .attendance-details {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+/* =========================================================
+   EMPLOYEE PROFILE
+   ========================================================= */
+
+.profile-summary {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.profile-avatar {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+
+    flex-shrink: 0;
+
+    background: #fff3d8;
+
+    color: #8a620f;
+
+    border: 1px solid #ead7ab;
+
+    border-radius: 50%;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+.profile-summary-info h3 {
+    margin-bottom: 4px;
+
+    color: #292d32;
+
+    font-size: 20px;
+}
+
+.profile-summary-info p {
+    margin-bottom: 9px;
+
+    color: #737980;
+
+    font-size: 13px;
+}
+
+
+/* Profile sections */
+
+.profile-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+.profile-grid .dashboard-section {
+    margin-bottom: 20px;
+}
+
+
+/* Information rows */
+
+.profile-info-list {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.profile-info-row {
+    display: grid;
+
+    grid-template-columns:
+        minmax(130px, 0.8fr)
+        minmax(0, 1.2fr);
+
+    gap: 20px;
+
+    align-items: center;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.profile-info-row:first-child {
+    padding-top: 0;
+}
+
+.profile-info-row:last-child {
+    padding-bottom: 0;
+
+    border-bottom: 0;
+}
+
+.profile-info-row > span {
+    color: #777d84;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.profile-info-row > strong {
+    color: #30343a;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* =========================================================
+   PROFILE RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 850px) {
+
+    .profile-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .profile-summary {
+        align-items: flex-start;
+    }
+
+    .profile-avatar {
+        width: 56px;
+        height: 56px;
+
+        font-size: 18px;
+    }
+
+    .profile-info-row {
+        grid-template-columns: 1fr;
+
+        gap: 5px;
+    }
+
+}
+
+/* =========================================================
+   EMPLOYEE PAYSLIPS
+   ========================================================= */
+
+.payslip-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.payslip-summary-item {
+    padding: 17px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #e4e7ea;
+
+    border-radius: 8px;
+}
+
+.payslip-summary-item span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #777d84;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+}
+
+.payslip-summary-item strong {
+    display: block;
+
+    color: #30343a;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   EMPLOYEE PAYSLIPS RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+    .payslip-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================================
+   EMPLOYEE PERFORMANCE
+   ========================================================= */
+
+.performance-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 14px;
+}
+
+.performance-summary-item {
+    padding: 17px;
+
+    background: #f8f9fa;
+
+    border: 1px solid #e4e7ea;
+
+    border-radius: 8px;
+}
+
+.performance-summary-item span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #777d84;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.3px;
+}
+
+.performance-summary-item strong {
+    display: block;
+
+    color: #30343a;
+
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   PERFORMANCE RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 700px) {
+
+    .performance-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================================================
+   LOGIN PAGE
+   ========================================================= */
+
+.login-page {
+    min-height: 100vh;
+
+    margin: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f4f5f7 0%,
+            #eceef1 100%
+        );
+}
+
+.login-wrapper {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+
+    padding: 30px 20px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+
+/* =========================================================
+   LOGIN BRANDING
+   ========================================================= */
+
+.login-brand {
+    margin-bottom: 24px;
+
+    text-align: center;
+}
+
+.login-brand-mark {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 58px;
+    height: 58px;
+
+    margin: 0 auto 14px;
+
+    background: #d89b26;
+
+    color: #ffffff;
+
+    border-radius: 12px;
+
+    font-size: 27px;
+    font-weight: 700;
+
+    box-shadow:
+        0 5px 14px rgba(0, 0, 0, 0.10);
+}
+
+.login-brand h1 {
+    margin: 0 0 5px;
+
+    color: #25292e;
+
+    font-size: 27px;
+    font-weight: 700;
+}
+
+.login-brand p {
+    margin: 0;
+
+    color: #737980;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LOGIN CARD
+   ========================================================= */
+
+.login-card {
+    padding: 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #e0e3e6;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.login-heading {
+    margin-bottom: 24px;
+}
+
+.login-heading h2 {
+    margin-bottom: 5px;
+
+    color: #292d32;
+
+    font-size: 22px;
+}
+
+.login-heading p {
+    color: #777d84;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   LOGIN FORM
+   ========================================================= */
+
+.login-form .form-group {
+    margin-bottom: 18px;
+}
+
+.login-form label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #3f444a;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.login-form input {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    background: #ffffff;
+
+    border: 1px solid #cfd4d9;
+
+    border-radius: 6px;
+
+    color: #30343a;
+
+    font-size: 14px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.login-form input:focus {
+    outline: none;
+
+    border-color: #d89b26;
+
+    box-shadow:
+        0 0 0 3px rgba(216, 155, 38, 0.13);
+}
+
+.login-button {
+    width: 100%;
+
+    margin-top: 4px;
+
+    padding: 11px 16px;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   LOGIN ERROR
+   ========================================================= */
+
+.login-error {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================================
+   LOGIN FOOTER
+   ========================================================= */
+
+.login-footer {
+    margin-top: 22px;
+    padding-top: 18px;
+
+    border-top: 1px solid #eeeeee;
+
+    text-align: center;
+}
+
+.login-footer p {
+    margin: 0;
+
+    color: #8a8f95;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   LOGIN RESPONSIVE
+   ========================================================= */
+
+@media screen and (max-width: 500px) {
+
+    .login-wrapper {
+        padding: 22px 15px;
+    }
+
+    .login-card {
+        padding: 24px 20px;
+    }
+
+    .login-brand-mark {
+        width: 52px;
+        height: 52px;
+
+        font-size: 23px;
+    }
+
+    .login-brand h1 {
+        font-size: 24px;
+    }
+
+}
+
+/* =========================================================
+   18. PRINT LAYOUT
+   ========================================================= */
+
+@media print {
+
+    .no-print,
+    .topbar,
+    .sidebar,
+    .btn,
+    button {
+        display: none !important;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+
+        background: #ffffff;
+
+        color: #000000;
+    }
+
+    .layout {
+        display: block;
+    }
+
+    .content {
+        margin: 0;
+
+        padding: 20px;
+
+        width: 100%;
+    }
+
+    .page-title {
+        border-bottom: 1px solid #999999;
+    }
+
+    .table-container {
+        padding: 0;
+
+        border: none;
+
+        box-shadow: none;
+
+        overflow: visible;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    th {
+        background: #eeeeee !important;
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+}

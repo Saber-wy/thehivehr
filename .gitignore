@@ -1,0 +1,27 @@
+# XAMPP / local environment
+xampp/
+*.log
+
+# Local configuration
+config.php
+.env
+
+# Database backups
+*.sql
+*.sql.gz
+
+# Uploaded/generated files
+uploads/
+generated_payslips/
+
+# IDE / editor files
+.vscode/
+.idea/
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Temporary files
+*.tmp
+*.bak
